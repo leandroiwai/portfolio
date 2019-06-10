@@ -1,0 +1,12 @@
+{% load static %}
+<h1>All my jobs</h1>
+
+{% for job in jobs.all %}
+    <div>
+        <img src="{{ job.image }}"/>
+        <h2>{{ job.summary }}</h2>
+    </div>
+
+{% endfor %}
+
+<img src="{% static "badge.png" %}" alt="My image">
